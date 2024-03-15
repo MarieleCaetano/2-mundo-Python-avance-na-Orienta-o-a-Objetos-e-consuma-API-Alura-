@@ -7,4 +7,8 @@ class Prato(ItemCardapio):
         self.descricao = descricao
     
     def __str__(self):
-        return self.nome
+        return self._nome
+    
+    def aplicar_desconto(self):
+        self.preco -= (self.preco * 0.05) # caso eu queira posso sbstituir essa linha por pass, nao
+        #dando desconto algum
